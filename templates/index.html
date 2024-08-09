@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Window</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    <!-- Profile button -->
+    <button id="profile-btn" onclick="goToProfile()">Profile</button>
+
+    <div id="report-window" class="window">
+        <h3>Why are you reporting this post?</h3>
+        <ul id="report-options">
+            <li data-genre="spam">It's spam <span>&#8250;</span></li>
+            <li data-genre="nudity">Nudity or sexual activity <span>&#8250;</span></li>
+            <li data-genre="hate">Hate speech or symbols <span>&#8250;</span></li>
+            <li data-genre="violence">Violence or dangerous organizations <span>&#8250;</span></li>
+            <li data-genre="illegal">Sale of illegal or regulated goods <span>&#8250;</span></li>
+            <li data-genre="bullying">Bullying or harassment <span>&#8250;</span></li>
+            <li data-genre="ip-violation">Intellectual property violation <span>&#8250;</span></li>
+            <li data-genre="suicide">Suicide or self-injury <span>&#8250;</span></li>
+            <li data-genre="eating-disorders">Eating disorders <span>&#8250;</span></li>
+            <li data-genre="misinformation">Misinformation <span>&#8250;</span></li>
+            <li data-genre="personal-information">Sharing Personal Information <span>&#8250;</span></li>
+            <li data-genre="undisclosed-branded">Undisclosed Branded Content <span>&#8250;</span></li>
+            <li data-genre="deepfakes">Deepfakes<span>&#8250;</span></li>
+            <li data-genre="others">Others (Please specify) <span>&#8250;</span></li>
+        </ul>
+        <div>
+            <button id="ai-suggestion-btn" onclick="getAISuggestion()">AI Suggestion</button>
+            <button id="next-btn" onclick="goToElaboration()">Next</button>
+        </div>
+    </div>
+    <div id="description-window" class="window hidden">
+        <h2 id="description-title"></h2>
+        <p id="description-text"></p>
+        <button onclick="goBack()">Back</button>
+    </div>
+    <div id="elaboration-window" class="window hidden">
+        <h3>Elaborate on your issue (optional)</h3>
+        <textarea id="elaboration-text" rows="20" cols="20"></textarea>
+        <button onclick="submitReport()">Submit</button>
+    </div>
+    <script src="../static/scripts.js"></script>
+</body>
+</html>

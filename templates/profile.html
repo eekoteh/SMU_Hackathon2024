@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>Your Profile</h1>
+    <div id="profile-section">
+        <img id="profile-photo" src="../static/snoopy.jpg" alt="Profile Photo">
+        <h2>Report Progress</h2>
+        <table id="report-table">
+            <tr>
+                <th>Date</th>
+                <th>Genres</th>
+                <th>Post Owner</th>
+                <th>Status</th>
+            </tr>
+            {% for report in reports %}
+            <tr class="report-row" onclick="checkReportDetails('{{ report.id }}')" {% if report.status == 'Complete' %}style="cursor: pointer;"{% endif %}>
+                <td>{{ report.date }}</td>
+                <td>{{ report.genres | join(', ') }}</td>
+                <td>{{ report.post_owner }}</td>
+                <td>{{ report.status }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script src="../static/scripts.js"></script>
+</body>
+</html>
+

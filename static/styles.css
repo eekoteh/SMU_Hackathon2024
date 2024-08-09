@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+
+
+#profile-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#profile-btn:hover {
+    background-color: #0056b3;
+}
+
+#profile-section {
+    margin: 50px auto;
+    width: 60%;
+    text-align: center;
+}
+
+#profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+#report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#report-table th, #report-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#report-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.report-row:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+.window {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 50px auto;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:hover {
+    background-color: #f9f9f9;
+}
+
+li.selected {
+    background-color: green;
+    color: white;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+#description-text
+{
+    text-align: left
+}
+
+#elaboration-text {
+    width: 300px; /* Set the width */
+    height: 150px; /* Set the height */
+    resize: none; /* Prevent resizing by the user */
+    padding: 10px; /* Optional: Add padding for better text readability */
+    font-size: 14px; /* Optional: Set font size */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
