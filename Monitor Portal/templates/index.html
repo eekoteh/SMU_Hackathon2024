@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Portal</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>Monitoring Portal</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Platform</th>
+                <th>Post ID</th>
+                <th>Keywords</th>
+                <th>Flags</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{ post.platform }}</td>
+                <td><a href="{{ post.url }}" target="_blank">{{ post.post_id }}</a></td>
+                <td>{{ post.keywords }}</td>
+                <td>{{ post.flags }}</td>
+                <td>
+                    {% if post.flags >= threshold %}
+                    <span class="attention">Required Attention</span>
+                    {% else %}
+                    <span>Normal</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
